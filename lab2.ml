@@ -11,8 +11,9 @@
 This lab is intended to introduce you to staples of functional
 programming in OCaml, including:
 
-    * simple data structures like lists and tuples higher-order
-    * functional programming (functions as first-class values)
+    * simple data structures like lists and tuples 
+    * higher-order functional programming (functions as first-class
+      values)
  *)
 
 (*======================================================================
@@ -107,7 +108,12 @@ Exercise 3: Complete the following definition for a function
 `third_element` that returns a `bool * int` pair, whose first element
 represents whether or not its list argument has a third element, and
 whose second element represents that element if it exists (or 0 if it
-does not).
+does not). For example,
+
+    # third_element [1; 2; 3; 4; 5] ;;
+    - : bool * int = (true, 3)
+    # third_element [] ;;
+    - : bool * int = (false, 0)
 ......................................................................*)
 
 let third_element (lst : int list) : bool * int =
@@ -143,7 +149,7 @@ properly.
 Test out your implementation of `square_all` by modifying the template
 code below to define `exercise2` to be the `square_all` function
 applied to the list containing the elements `3`, `4`, and `5`. You'll
-want to replace the `[]` with the correct function call.
+want to replace the `[]` with the correct function application.
 
 Thorough testing is important in all your work, and we hope to impart
 this view to you in CS51. Testing will help you find bugs, avoid
@@ -430,7 +436,10 @@ let zip_ho : int list -> int list -> (int * int) list =
 (*......................................................................
 Exercise 12: Define a function `evens`, using these higher-order
 functional programming techniques, that returns a list of all of the
-even numbers in its argument list.
+even numbers in its argument list in the same order. For instance,
+
+    # evens [1; 2; 3; 6; 5; 4] ;;
+    - : int list = [2; 6; 4]
 ......................................................................*)
 
 (* Again, without partial application: 
