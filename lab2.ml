@@ -147,7 +147,7 @@ built-in `failwith` function. Edit the code to implement `square_all`
 properly.
 
 Test out your implementation of `square_all` by modifying the template
-code below to define `exercise2` to be the `square_all` function
+code below to define `exercise4` to be the `square_all` function
 applied to the list containing the elements `3`, `4`, and `5`. You'll
 want to replace the `[]` with the correct function application.
 
